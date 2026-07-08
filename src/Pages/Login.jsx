@@ -4,7 +4,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import '../Pages/login.css'
 import axios from 'axios'
 import ForgotPassword from './Forgot';
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Login() {
     const navigate = useNavigate();
@@ -17,8 +17,8 @@ function Login() {
     const [chake, setChake] = useState(false)
     const [open, setOpen] = useState(false)
 
-
-    const API_URLS = "http://localhost:8000/api/newusers"
+    console.log(apiUrl);
+    const API_URLS = apiUrl + "/api/newusers"
 
 
     const handlesubmit = async (e) => {

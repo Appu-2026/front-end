@@ -11,8 +11,8 @@ function ForgotPassword({ setOpen }) {
     const [submitAttempted, setSubmitAttempted] = useState(false)
     const [useremailerror, setUserEmailError] = useState("")
     const [userpassworderror, setUserPasswordError] = useState("")
-
-    const API = 'http://localhost:8000/api/update/newuser';
+    const apiUrl = import.meta.env.VITE_API_URL;
+    const API = apiUrl + '/api/update/newuser';
 
     const heandelValueOnsubimt = async (e) => {
         e.preventDefault()

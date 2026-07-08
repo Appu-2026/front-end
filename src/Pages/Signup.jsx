@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react'
 import '../Pages/Signup.css'
 import { Link, useNavigate, UNSAFE_decodeViaTurboStream } from 'react-router-dom'
 import axios from 'axios'
-
-
-
+const apiUrl = import.meta.env.VITE_API_URL;
 
 function Singup() {
     const [username, setUsername] = useState('')
@@ -18,7 +16,7 @@ function Singup() {
     const [chake, setChake] = useState(false)
 
     const navigate = useNavigate();
-    const API_URL = "http://localhost:8000/api/newuser"
+    const API_URL = apiUrl + "/api/newuser"
 
     useEffect(() => {
         featchMember()

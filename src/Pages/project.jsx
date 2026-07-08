@@ -3,11 +3,11 @@ import { UNSAFE_decodeViaTurboStream } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import '../Pages/project.css'
 import axios from 'axios';
-
-const API_URL = 'http://localhost:8000/api/users';
-const API_URL1 = 'http://localhost:8000/api/user';
-const API_URLD = 'http://localhost:8000/api/delete/user';
-const API_URLU = 'http://localhost:8000/api/update/user';
+const apiUrl = import.meta.env.VITE_API_URL;
+const API_URL = apiUrl + '/api/users';
+const API_URL1 = apiUrl + '/api/user';
+const API_URLD = apiUrl + '/api/delete/user';
+const API_URLU = apiUrl + '/api/update/user';
 
 function About() {
     const [data, setData] = useState([]);
@@ -78,7 +78,7 @@ function About() {
                                     <td>{current.mobile}</td>
                                     <td>{current.jobtype}</td>
                                     <td>{current.dob}</td>
-                                    <td >
+                                    <td className='acction-btn'>
                                         <button onClick={() => pictureUser(current._id)} >pic</button>||
                                         <button onClick={() => editUser(current._id)} ><i className="fa-solid fa-pen-to-square"></i></button>||
                                         <button onClick={() => deletUser(current._id)} ><i className="fa-solid fa-trash"></i></button>

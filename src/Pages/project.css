@@ -82,12 +82,15 @@ table th,table td{
 }
 
 table {
-    
+
     border-collapse: collapse;
 }
 .onchange_btn{
     display: flex;
     gap:1rem;
     margin: 1px;
+}
+.acction-btn{
+    display: flex;
 }
 
