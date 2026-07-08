@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import fs from 'fs';
 import { Link, useNavigate } from 'react-router-dom'
 import '../Pages/login.css'
 import axios from 'axios'
@@ -35,24 +34,24 @@ function Login() {
         try {
             const response = await axios.post(API_URLS, playload);
             console.log(response)
-            const { message, success, jwtToken, useremail, username } = response.data
+            const { message, success, jwtToken, username, useremail } = response.data
             if (success) {
+                localStorage.setItem("jwtToken", jwtToken);
+                localStorage.setItem("username", username);
+                localStorage.setItem("useremail", useremail);
                 alert(message)
                 setTimeout(() => {
                     navigate('/aboutkc')
                 }, 1000)
-            } else if (error) {
-                const details = error?.details[0].errorMessage;
-                console.log(details)
+            } else {
+                alert(message || "Login failed");
             }
             return;
         } catch (error) {
             console.log("ch-err", error)
-            const { success, errorMessage } = error.response.data;
-            if (!success) {
-                alert(errorMessage)
-                setChake(false)
-            }
+            const errorMessage = error.response?.data?.errorMessage || error.message || "An error occurred";
+            alert(errorMessage)
+            setChake(false)
         }
 
     }

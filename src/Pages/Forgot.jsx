@@ -20,10 +20,15 @@ function ForgotPassword({ setOpen }) {
         const playload = { useremail, newPassword }
         if (!useremail) {
             setUserEmailError("please enter Useremail")
-        } if (!newPassword) {
+            return;
+        }
+        if (!newPassword) {
             setUserPasswordError("please enter password")
-        } if (newPassword !== confirmpassword) {
+            return;
+        }
+        if (newPassword !== confirmpassword) {
             setUserPasswordError("please enter same password")
+            return;
         }
         try {
             const response = await axios.put(API, playload)
@@ -33,7 +38,8 @@ function ForgotPassword({ setOpen }) {
             handelback()
 
         } catch (error) {
-            alert(error)
+            const errorMessage = error.response?.data?.message || error.message || "An error occurred";
+            alert(errorMessage)
         }
 
     }

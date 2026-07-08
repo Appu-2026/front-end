@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import '../Pages/Signup.css'
-import { Link, useNavigate, UNSAFE_decodeViaTurboStream } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 const apiUrl = import.meta.env.VITE_API_URL;
 
@@ -19,14 +19,14 @@ function Singup() {
     const API_URL = apiUrl + "/api/newuser"
 
     useEffect(() => {
-        featchMember()
+        fetchMember()
     }, [])
 
-    const featchMember = () => {
+    const fetchMember = () => {
         try {
 
         } catch (error) {
-            console.error(massege("please enetr currect entry"), error)
+            console.error("please enter correct entry", error)
         }
 
     }
