@@ -1,0 +1,93 @@
+
+.main_page{
+    display: flex;
+    flex-direction: column;
+    background-color: bisque;
+    width: 90%;
+    height: 100%;
+    justify-content: space-between;
+    gap:40px;
+    padding: 20px;
+    border: 1px black solid;
+    margin: 20px  ;
+    
+}
+.uploding_file{
+    display: flex;
+    
+}
+.first_line{
+     display: flex;
+    justify-content: space-between;
+    margin-right: 0;
+}
+.first_main{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10% ;
+    
+}
+
+.secend_main{
+     display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+}
+.job-type{
+    display: flex;
+    justify-content: space-between;
+}
+.btn-active{
+    background-color: #3498db;
+    color: white;
+    padding : 0.2rem;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid black;
+    border-Width: 1px;
+    
+}
+.btn-normal{
+ background-color: none;
+ cursor: pointer;
+}
+.dob-label{
+    display: flex;
+    margin-right: 10%;
+}
+.subbimt_add{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10%;
+}
+.add_button{
+    padding : 1px
+}
+/* bottum page style   */
+.data_page{
+    display: flex;
+    background-color: bisque;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    padding: 20px;
+    border: 1px black solid;
+    margin: 20px  ;
+
+}
+table th,table td{
+    border: 1px solid black;
+    padding: 10px;
+    
+}
+
+table {
+    
+    border-collapse: collapse;
+}
+.onchange_btn{
+    display: flex;
+    gap:1rem;
+    margin: 1px;
+}
+

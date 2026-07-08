@@ -1,0 +1,51 @@
+*{
+    border-radius: 5px;
+    border: white;
+    background-color: none;
+}
+.dailog{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 10px;
+    justify-content: center;
+    border-radius: 1rem;
+    border: burlywood
+}
+.submit-form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    gap: 20px;
+    
+}
+.submit-btn{
+    display: flex;
+    padding: 4px;
+    width: 100%;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: rgb(117, 128, 98);
+    background-color: rgb(159, 188, 233);
+    color: black;
+}
+
+.close_btn{
+    display: flex;
+    justify-content: right; 
+}
+.click-back{
+    padding: 3px;
+    width: 4rem;
+    border-radius: 5px;
+    border-color: aquamarine;
+    background-color: bisque;
+    color: black;
+}
+.click-back:hover{
+    background-color:rgb(241, 194, 136);
+    border-color: rgb(171, 255, 227);
+    
+} 
+
+

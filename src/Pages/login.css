@@ -1,0 +1,60 @@
+
+.sign_in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 140vh;
+  background-color: #f4f7f6;
+}
+.signin_form {
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  
+  
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+   margin-bottom: 10px;
+}
+
+.input-group label {
+  margin-bottom: 6px;
+  margin-top: 10px;
+  color: #2c2b2b;
+  font-size: 20px solid;
+}
+
+.input-group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.checkbox{
+    display:flex;
+    justify-content: space-between;
+    gap:1rem;
+    margin-bottom: 20px;
+}
+.btn_login{
+  display: flex;
+  flex-direction: column;
+  height:1rem;
+  gap:20px;
+
+}
+button{
+    padding:5px;
+}
+.sign_up{
+    display: flex;
+    justify-content: center;
+    margin-top: 6rem;
+}
