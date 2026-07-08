@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
-import '../Pages/forgot'
+import '../Pages/forgot.css'
 
 
 function ForgotPassword({ setOpen }) {
