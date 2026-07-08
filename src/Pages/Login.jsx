@@ -80,7 +80,7 @@ function Login() {
 
                     </div>
                     <div>
-                        <Link href='' onClick={() => setOpen(true)}>Forgot password</Link>
+                        <Link to='#' onClick={() => setOpen(true)}>Forgot password</Link>
                     </div>
                 </div>
                 <div className='btn_login login'>
@@ -89,7 +89,7 @@ function Login() {
                 </div>
 
                 <div className='sign_up'>
-                    <p>Don't have an account?</p> <a href='/singup'>sigh up</a>
+                    <p>Don't have an account?</p> <Link to='/singup'>sign up</Link>
                 </div>
             </form>
             {open &&

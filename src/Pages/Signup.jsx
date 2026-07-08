@@ -108,6 +108,9 @@ function Singup() {
                 <div className='btn_login'>
                     <button type='submit' >sign in</button>
                 </div>
+                <div style={{ marginTop: '15px', textAlign: 'center' }}>
+                    <p>Already have an account? <Link to="/login">Login here</Link></p>
+                </div>
 
             </form>
 
