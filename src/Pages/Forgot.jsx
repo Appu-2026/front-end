@@ -47,21 +47,20 @@ function ForgotPassword({ setOpen }) {
         setOpen(false)
     }
 
-
     return (
         <dialog id="myModal" open={true} >
             <h2>Creat New Password!</h2>
             <form className="submit-form" onSubmit={heandelValueOnsubimt}>
                 <div>
-                    <label>USENAME :</label>
+                    <label>USENAME :</label><br />
                     <input type="text" onChange={(e) => setUserEmail(e.target.value)} placeholder="useremail"></input>
                 </div>
                 <div>
-                    <label>NEW PASSWORD</label>
+                    <label>NEW PASSWORD :</label><br />
                     <input type="password" onChange={(e) => setNewpassword(e.target.value)} placeholder="new password"></input>
                 </div>
                 <div>
-                    <label>CONFIRM NEW PASSWORD</label>
+                    <label>CONFIRM NEW PASSWORD :</label><br />
                     <input type="password" onChange={(e) => setConfirmpassword(e.target.value)} placeholder="confirm new user" ></input>
                 </div>
                 <button type="submit" className="submit-btn" >submit</button>

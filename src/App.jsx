@@ -20,7 +20,6 @@ function App() {
           </ProtectedRoute>
         } />
         <Route path="/singup" element={<Singup />} />
-        {/* <Route path="/forgot" element={<ForgotPassword />} /> */}
         <Route path="*" element={<h1>Not Found</h1>} />
       </Routes>
     </BrowserRouter>

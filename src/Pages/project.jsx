@@ -32,12 +32,12 @@ function About() {
     const editUser = async (id) => {
         try {
             const token = localStorage.getItem("jwtToken");
-            // Corrected to GET method to fetch details of a specific user
+
             const response = await axios.get(`${API_URL1}/${id}`, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (response.data) {
-                setCurrenUser(response.data); // Set the actual user data payload
+                setCurrenUser(response.data);
             }
         } catch (error) {
             console.error("Error fetching user data", error);
@@ -245,7 +245,7 @@ function AddMember({ setData, currentUser, setCurrenUser, fetchMembers }) {
                         {submitAttempted && !email && <p style={{ color: 'red', fontSize: 10 }}>Plese enter the Email</p>}
                     </span>
                 </div>
-                
+
                 <div className='secend_main'>
                     <div className='job-type'> Job Type:
                         <span>
@@ -260,7 +260,7 @@ function AddMember({ setData, currentUser, setCurrenUser, fetchMembers }) {
                         {submitAttempted && !dob && <p style={{ color: 'red', fontSize: 10 }}>Plese Enter the Date of Birth</p>}
                     </span>
                 </div>
-                
+
                 <div className='subbimt_add'>
                     <label>Pref.Locetion: <input
                         type='checkbox'
